@@ -15,7 +15,7 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
 
-
+/*
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
@@ -52,7 +52,7 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 // add click event to modal close button
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
-
+*/
 
 
 // custom select variables
@@ -115,6 +115,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
+
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
@@ -157,3 +158,13 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+var icon = document.getElementById("icon");
+icon.onclick = function() {
+  document.body.classList.toggle("dark-theme");
+  if (document.body.classList.contains("dark-theme")) {
+    icon.setAttribute("name", "sunny-outline");
+  } else {
+    icon.setAttribute("name", "moon-outline");
+  }
+};
